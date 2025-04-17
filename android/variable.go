@@ -230,6 +230,8 @@ type productVariables struct {
 	PgoAdditionalProfileDirs []string `json:",omitempty"`
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
+
+	Linker_non_pie_executabes_header_dir *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {

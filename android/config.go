@@ -845,3 +845,12 @@ func stringSlice(s *[]string) []string {
 		return nil
 	}
 }
+
+func (c *config) LinkerNonPieExecutablesHeaderDir() string {
+	if c.ProductVariables.Linker_non_pie_executabes_header_dir != nil &&
+		*c.ProductVariables.Linker_non_pie_executabes_header_dir != "" {
+		return *c.ProductVariables.Linker_non_pie_executabes_header_dir
+	}
+
+	return "";
+}
